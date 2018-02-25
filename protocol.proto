@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "interx.protos";
+option java_outer_classname = "Protocol";
+
+package protos;
+
+service Server {
+  rpc send (Message) returns (EmptyMessage) {}
+}
+
+message Message {
+  string json = 1;
+}
+
+message EmptyMessage {
+}
